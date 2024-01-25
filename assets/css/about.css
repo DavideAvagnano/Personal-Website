@@ -1,0 +1,209 @@
+:root {
+  --main-color: #11adeb;
+  --text-color: #000;
+  --text-lighter-color: #555;
+  --bg-color: #fff;
+  --second-bg-color: #ddd;
+  --vertical-line-color: #a5a5a5;
+
+  --h1-font: 3.5rem;
+  --h2-font: 2.5rem;
+  --h4-font: 1.5rem;
+  --p-font: 1rem;
+}
+
+body::before,
+body::after {
+  position: fixed;
+  content: "";
+  width: 2px;
+  height: 100%;
+  top: 60%;
+  background-color: var(--vertical-line-color);
+  z-index: 0;
+}
+
+body::before {
+  left: 25%;
+}
+
+body::after {
+  right: 25%;
+}
+
+.about-header {
+  padding: 15px 15%;
+}
+
+.about-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-title h4 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--text-lighter-color);
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+.about-title h1 {
+  font-size: var(--h2-font);
+}
+
+.about-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  max-width: 50%;
+  margin: auto;
+  padding: 100px 0 0;
+}
+
+.box-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  box-shadow: 0 0 5px var(--text-color);
+  backdrop-filter: brightness(95%);
+  transition: all 0.3s ease;
+}
+
+.box-section:hover {
+  border: 1px solid var(--main-color);
+  box-shadow: 0 0 10px var(--main-color);
+  cursor: pointer;
+}
+
+.box-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.box-section p {
+  text-align: center;
+  line-height: 25px;
+}
+
+/* ############################## Animation ############################## */
+.anim-x-right {
+  opacity: 0;
+  transform: translateX(20%);
+  animation: moveleft 0.5s linear forwards;
+}
+@keyframes moveleft {
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ############################## Media Query ############################## */
+@media (max-width: 1700px) {
+  .about-header {
+    padding: 20px 10%;
+  }
+
+  .about-section {
+    padding: 110px 10%;
+  }
+
+  body::before {
+    left: 20%;
+  }
+
+  body::after {
+    right: 20%;
+  }
+
+  .about-title h4 {
+    font-size: 1.2rem;
+  }
+
+  .about-title h1 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 1380px) {
+  .about-header {
+    padding: 20px 5%;
+  }
+
+  header.sticky {
+    padding: 15px 5%;
+  }
+
+  .about-section {
+    padding: 110px 5%;
+  }
+
+  body::before {
+    left: 15%;
+  }
+
+  body::after {
+    right: 15%;
+  }
+
+  .about-grid {
+    max-width: 60%;
+  }
+
+  .about-title h4 {
+    font-size: 1.2rem;
+  }
+
+  .about-title h1 {
+    font-size: 2.3rem;
+  }
+
+  .box-section h3,
+  .box-section h4 {
+    font-size: 1.1rem;
+  }
+
+  .box-section p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 950px) {
+  body::before {
+    left: 5%;
+  }
+
+  body::after {
+    right: 5%;
+  }
+
+  .about-grid {
+    max-width: 80%;
+  }
+
+  .about-title h4 {
+    font-size: 1rem;
+  }
+
+  .about-title h1 {
+    font-size: 2rem;
+  }
+
+  .box-section h3,
+  .box-section h4 {
+    font-size: 1rem;
+  }
+
+  .box-section p {
+    font-size: 14px;
+  }
+}
