@@ -24,16 +24,6 @@
   />
   <!-- aos animations -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <!-- email js -->
-  <script 
-    type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-  </script>
-  <script type="text/javascript">
-    (function(){
-        emailjs.init("OCQPfH5uDROXGEJH_");
-    })();
-  </script>
 </head>
 <body>
 
@@ -52,7 +42,7 @@
     </nav>
 
     <div class="right-nav">
-      <a href="#" class="right-btn">Download CV</a>
+      <a href="" class="right-btn" onclick="alert('work in progress')">Download CV</a>
       <div class="bx bx-menu" id="menu-icon"></div>
     </div>
   </header>
@@ -328,7 +318,7 @@
         </div>
       </a>
 
-      <a href="#portfolio">
+      <a href="#portfolio" onclick="alert('work in progress')">
         <div class="row">
           <img src="assets/media/img/js-project.png">
           <div class="main-row">
@@ -367,8 +357,10 @@
       </p>
     </div>
 
-    <a href="#home" class="scroll-top">
-      <i class="fa-solid fa-angles-up"></i>
+    <a href="#home">
+      <div  class="scroll-top">
+        <i class="fa-solid fa-angles-up"></i>
+      </div>
     </a>
   </footer>
 
@@ -393,6 +385,17 @@
       offset: 250,
       duration: 1400,
     });
+  </script>
+
+  <!-- email js -->
+  <script 
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init("OCQPfH5uDROXGEJH_");
+    })();
   </script>
 </body>
 </html>
