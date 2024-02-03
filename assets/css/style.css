@@ -160,10 +160,24 @@ header.sticky {
 
 /* ############################## Home ############################## */
 .home {
+  position: relative;
+  overflow: hidden;
   height: 100vh;
   width: 100%;
-  display: flex;
-  align-items: center;
+}
+
+.main-content {
+  position: absolute;
+  top: 300px;
+  z-index: 2;
+}
+
+.home-img {
+  position: absolute;
+  right: 15%;
+  bottom: 0px;
+  height: 90vh;
+  z-index: 1;
 }
 
 .main-content h4 {
@@ -180,8 +194,10 @@ header.sticky {
 .main-content p {
   font-size: var(--p-font);
   color: var(--text-color);
+  font-weight: 500;
   line-height: 25px;
   margin-bottom: 40px;
+  width: 70%;
 }
 
 .social {
@@ -242,8 +258,18 @@ header.sticky {
   gap: 1rem;
 }
 
-/* .about-img img{
-} */
+.about-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-img img {
+  width: 80%;
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--main-color);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+}
 
 .about-text h2 {
   font-size: var(--h2-font);
@@ -527,6 +553,10 @@ form .send-btn:hover {
   .footer {
     padding: 20px 10%;
   }
+
+  .home-img {
+    right: 10%;
+  }
 }
 
 @media (max-width: 1380px) {
@@ -548,6 +578,11 @@ form .send-btn:hover {
 
   .home {
     height: 90vh;
+  }
+
+  .home-img {
+    right: 5%;
+    height: 80vh;
   }
 
   :root {
@@ -625,10 +660,19 @@ form .send-btn:hover {
     height: 50px;
   }
 
+  .social a {
+    background-color: #eeeeee;
+  }
+
   .about {
     grid-template-columns: 1fr;
+    gap: 50px;
     text-align: center;
     margin: auto;
+  }
+
+  .about-img img {
+    width: 65%;
   }
 
   .about-text p {
@@ -653,5 +697,25 @@ form .send-btn:hover {
 
   .copyright {
     text-align: center;
+  }
+}
+
+@media (max-width: 620px) {
+  .main-content {
+    top: 200px;
+  }
+
+  .main-content p {
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .social {
+    margin-bottom: 20px;
+  }
+
+  .home-img {
+    right: -10%;
+    left: 8%;
   }
 }
